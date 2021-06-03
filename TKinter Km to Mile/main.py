@@ -6,6 +6,8 @@ def miles_to_km():
     km = miles * 1.609
     kilometer_result_label.config(text=f"{km}")
 
+def reset():
+    miles_input.delete(0, END)
 
 window = Tk()
 window.title("Miles to Kilometer Convertor")
@@ -30,7 +32,7 @@ kilometer_label.grid(column=2, row=1)
 calculate_button = Button(text="Calculate", command=miles_to_km)
 calculate_button.grid(column=0, row=2)
 
-reset_button = Button(text="Reset")
+reset_button = Button(text="Reset", command=reset)
 reset_button.grid(column=2, row=2)
 
 
