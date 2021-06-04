@@ -8,6 +8,7 @@ def miles_to_km():
 
 def reset():
     miles_input.delete(0, END)
+    kilometer_result_label.config(text="")
 
 window = Tk()
 window.title("Miles to Kilometer Convertor")
